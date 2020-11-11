@@ -15,17 +15,18 @@
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.13.0",
     "eslint-plugin-react": "^7.21.5",
     "nodemon": "^2.0.6",
     "webpack": "^5.3.1",
     "webpack-cli": "^4.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node server.js --ignore public/",
+    "dev": "webpack -wd"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/gliu22/Nodejs_React/issues"
   },
