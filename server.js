@@ -5,8 +5,11 @@ import fs from 'fs';
 import apiRouter from './api/index.js';
 const server = express();
 
+server.set('view engine','ejs');
 server.get('/',(req,res)=>{
-    res.send('hello express');
+    res.render('index',{
+        str: 'this is a string'
+    });
 });
 
 server.use('/api',apiRouter);
